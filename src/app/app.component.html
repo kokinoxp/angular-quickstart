@@ -1,26 +1,80 @@
-<div class="header">
-  <div class="logo">
-    <img src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1646339469/angular_wzrs5o.png">
-  </div>
-</div>
-<div class="resource-list">
-  <h2>
-      Here are some resources to help you on your Angular + Netlify journey:
-  </h2>
-  <ul>
-    <li>
-      <a href="https://github.com/netlify-templates/angular-quickstart">The Angular Quickstart repo</a>
-    </li>
-    <li>
-      <a href="https://www.netlify.com/tags/angular/">Netlify Blog: Angular posts</a>
-    <li>
-      <a href="https://docs.netlify.com/">Netlify Docs</a>
-    </li>
-    <li>
-      <a href="https://angular.io/">Angular Docs</a>
-    </li>
-  </ul>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo">กรอกตัวเลข</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">บันทึกข้อมูล</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">ตัวเลข:</label>
+                            <input type="text" class="form-control" id="num" #num>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">บน:</label>
+                            <input type="number" class="form-control" id="up" #up>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">ล่าง:</label>
+                            <input type="number" class="form-control" id="down" #down>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">โต๊ด:</label>
+                            <input type="number" class="form-control" id="tood" #tood>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    <button type="submit" class="btn btn-primary"
+                        onclick="add(num.value,up.value,down.value,tood.value)" data-bs-dismiss="modal">บันทึก</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <th>ตัวเลข</th>
+                    <th>เลขซ้ำ</th>
+                </thead>
+                <tbody id="duplicateTable"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <th>รวมบน</th>
+                    <th>รวมล่าง</th>
+                    <th>รวมโต๊ด</th>
+                    <th>ทั้งหมด</th>
+                </thead>
+                <tbody id="sumAllTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <th>ตัวเลข</th>
+                    <th>บน</th>
+                    <th>ล่าง</th>
+                    <th>โต๊ด</th>
+                    <th>รวม</th>
+                </thead>
+                <tbody id="listTable"></tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <footer class="footer">
-  Made with <a href="https://netlify.com"><img src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1646714899/netliheart_ezlkim.svg" alt="Netlify Logo" /></a> for you!
+  Made with KKN!
 </footer>
